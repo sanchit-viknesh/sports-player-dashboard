@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "PlayerName": "Cristiano Ronaldo",
+    "age": 40,
+    "status": "G.O.A.T",
+    "country": "Portugal",
+    "clubs": [
+      "Sporting Lisbon",
+      "Manchester United",
+      "Real Madrid",
+      "Juventus"
+    ]
+  },
+  {
+    "id": 3,
+    "PlayerName": "João Cancelo",
+    "age": 29,
+    "status": "Versatile Defender",
+    "country": "Portugal",
+    "clubs": [
+      "Benfica",
+      "Valencia",
+      "Juventus",
+      "Manchester City"
+    ]
+  },
+  {
+    "id": 4,
+    "PlayerName": "Lionel Messi",
+    "age": 40,
+    "status": "G.O.A.T",
+    "country": "Argentina",
+    "clubs": [
+      "F.C Barcelona",
+      "Paris Saint Germain"
+    ]
+  },
+  {
+    "id": 5,
+    "PlayerName": "Ángel Di María",
+    "age": 35,
+    "status": "Winger",
+    "country": "Argentina",
+    "clubs": [
+      "Rosario Central",
+      "Benfica",
+      "Real Madrid",
+      "Paris Saint Germain"
+    ]
+  },
+  {
+    "id": 6,
+    "PlayerName": "Sergio Agüero",
+    "age": 35,
+    "status": "Striker",
+    "country": "Argentina",
+    "clubs": [
+      "Independiente",
+      "Atlético Madrid",
+      "Manchester City",
+      "Barcelona"
+    ]
+  },
+  {
+    "id": 7,
+    "PlayerName": "Kevin De Bruyne",
+    "age": 33,
+    "status": "World Best Midfielder",
+    "country": "Belgium",
+    "clubs": [
+      "Manchester City",
+      "Napoli",
+      "Real Madrid"
+    ]
+  },
+  {
+    "id": 8,
+    "PlayerName": "Romelu Lukaku",
+    "age": 30,
+    "status": "Striker",
+    "country": "Belgium",
+    "clubs": [
+      "Anderlecht",
+      "Chelsea",
+      "Inter Milan",
+      "Manchester United"
+    ]
+  },
+  {
+    "id": 9,
+    "PlayerName": "Thibaut Courtois",
+    "age": 31,
+    "status": "Goalkeeper",
+    "country": "Belgium",
+    "clubs": [
+      "Genk",
+      "Atlético Madrid",
+      "Chelsea",
+      "Real Madrid"
+    ]
+  },
+  {
+    "id": 10,
+    "PlayerName": "Kylian Mbappé",
+    "age": 25,
+    "status": "World Class Forward",
+    "country": "France",
+    "clubs": [
+      "Monaco",
+      "Paris Saint Germain"
+    ]
+  },
+  {
+    "id": 11,
+    "PlayerName": "N’Golo Kanté",
+    "age": 32,
+    "status": "Midfielder",
+    "country": "France",
+    "clubs": [
+      "Caen",
+      "Leicester City",
+      "Chelsea"
+    ]
+  },
+  {
+    "id": 12,
+    "PlayerName": "Paul Pogba",
+    "age": 30,
+    "status": "Midfielder",
+    "country": "France",
+    "clubs": [
+      "Le Havre",
+      "Manchester United",
+      "Juventus"
+    ]
+  }
+]

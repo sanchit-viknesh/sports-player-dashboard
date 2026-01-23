@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "PlayerName": "Sachin Ramesh Tendulkar",
+    "age": 50,
+    "status": "G.O.A.T",
+    "runs": 15946,
+    "format": "Test"
+  },
+  {
+    "id": 2,
+    "PlayerName": "Sachin Ramesh Tendulkar",
+    "age": 50,
+    "status": "G.O.A.T",
+    "runs": 18426,
+    "format": "ODI"
+  },
+  {
+    "id": 3,
+    "PlayerName": "Virat Kohli",
+    "age": 36,
+    "status": "Modern Great",
+    "runs": 8848,
+    "format": "Test"
+  },
+  {
+    "id": 4,
+    "PlayerName": "Virat Kohli",
+    "age": 36,
+    "status": "Modern Great",
+    "runs": 13848,
+    "format": "ODI"
+  },
+  {
+    "id": 5,
+    "PlayerName": "Virat Kohli",
+    "age": 36,
+    "status": "Modern Great",
+    "runs": 4008,
+    "format": "T20"
+  },
+  {
+    "id": 6,
+    "PlayerName": "MS Dhoni",
+    "age": 41,
+    "status": "Legendary Captain",
+    "runs": 4876,
+    "format": "Test"
+  },
+  {
+    "id": 7,
+    "PlayerName": "MS Dhoni",
+    "age": 41,
+    "status": "Legendary Captain",
+    "runs": 10773,
+    "format": "ODI"
+  },
+  {
+    "id": 8,
+    "PlayerName": "Rohit Sharma",
+    "age": 37,
+    "status": "Hitman",
+    "runs": 4137,
+    "format": "Test"
+  },
+  {
+    "id": 9,
+    "PlayerName": "Rohit Sharma",
+    "age": 37,
+    "status": "Hitman",
+    "runs": 10709,
+    "format": "ODI"
+  },
+  {
+    "id": 10,
+    "PlayerName": "Rohit Sharma",
+    "age": 37,
+    "status": "Hitman",
+    "runs": 4231,
+    "format": "T20"
+  }
+]
