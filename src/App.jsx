@@ -6,15 +6,10 @@ import { useMemo, useState } from 'react';
 
 function App() {
   const [selectSport, setSport] = useState("Football");
-  const [selectCricketFormat, setCricketFormat] = useState(null); // T20,ODI,Tes
-  const [footballState, setFootballState] = useState(
-    {
-      dropDown: {
-        clubOrCountry: null,
-        selectedOption: ""
-      }
-    }
-  );
+  const [selectCricketFormat, setCricketFormat] = useState(null); // T20,ODI,Test
+  const [footballFilterType, setFootballFilterType] = useState("Country"); // Club, Country
+  const [selectedDropdownOption, setSelectedDropdownOption] = useState(null); // Any one of the options in dropdown of Club, Country
+  
   const filterFootballPlayers = (clubOrCountry, optionSelected) => {
     if (!optionSelected) return footballPlayerDetails;
     let playersIntheClub = footballState.playerDetails;
@@ -34,6 +29,7 @@ function App() {
     if (!format) return cricketPlayerDetails;
     return cricketPlayerDetails.filter(cricPlayer => cricPlayer.format === format);
   }
+  const players = selectSport === "Football" ? footballPlayerDetails : cricketPlayerDetails;
 
   const loadPlayerDetails = useMemo(() => {
     if (selectSport === "Cricket") {
@@ -43,21 +39,21 @@ function App() {
       return filterCricketPlayersBasedOnFormat(selectCricketFormat)
     }
     if (selectSport === "Football") {
-      if (!footballState.dropDown.selectedOption) {
+      if (!selectedDropdownOption) {
         return footballPlayerDetails;
       }
-      if (footballState.dropDown.clubOrCountry === "Club") {
-        return filterFootballPlayers(footballState.dropDown.clubOrCountry, footballState.dropDown.selectedOption);
-      } else if (footballState.dropDown.clubOrCountry === "Country") {
-        return filterFootballPlayers(footballState.dropDown.clubOrCountry, footballState.dropDown.selectedOption);
+      if (footballFilterType === "Club") {
+        return filterFootballPlayers(footballFilterType, selectedDropdownOption);
+      } else if (footballFilterType === "Country") {
+        return filterFootballPlayers(footballFilterType, selectedDropdownOption);
       }
     }
-    return selectSport === "Football" ? footballPlayerDetails : cricketPlayerDetails
-  }, [selectSport, selectCricketFormat, footballState.dropDown.clubOrCountry, footballState.dropDown.selectedOption]);
+    return players;
+  }, [selectSport, selectCricketFormat, footballFilterType, selectedDropdownOption]);
 
   const dropDownOptions = useMemo(() => {
     let dropDownValues = new Set();
-    if (footballState.dropDown.clubOrCountry === "Club") {
+    if (footballFilterType === "Club") {
       footballPlayerDetails.map(fpd => {
         fpd.clubs.map(fpdClubVal => {
           dropDownValues.add(fpdClubVal);
@@ -67,15 +63,14 @@ function App() {
       footballPlayerDetails.map(fpd => dropDownValues.add(fpd.country));
     }
     return Array.from(dropDownValues);
-  }, [footballState.dropDown.clubOrCountry]);
+  }, [footballFilterType]);
 
   const handleDropDownChange = (optionSelected) => {
-    setFootballState(previous => ({
-      dropDown: {
-        ...previous.dropDown,
-        selectedOption: optionSelected
-      }
-    }));
+    setSelectedDropdownOption(optionSelected);
+  }
+  const handleFilterTypeChange = (clubOrCountry) => {
+    setFootballFilterType(clubOrCountry);
+    setSelectedDropdownOption('');
   }
 
   return (
@@ -85,8 +80,8 @@ function App() {
       <button onClick={() => setSport("Cricket")}>Show Cricket Players</button>
       {
         selectSport === "Football" ? <div className="game-speci fic-button-container">
-          <button onClick={() => setFootballState(prev => ({ ...prev, dropDown: { clubOrCountry: 'Country' } }))}>Country Wise</button>
-          <button onClick={() => setFootballState(prev => ({ ...prev, dropDown: { clubOrCountry: 'Club' } }))}>Club Wise</button></div> :
+          <button onClick={() => handleFilterTypeChange('Country')}>Country Wise</button>
+          <button onClick={() => handleFilterTypeChange('Club')}>Club Wise</button></div> :
           <div className="game-specific-button-container">
             <button onClick={() => setCricketFormat("Test")}>Test Cricket</button>
             <button onClick={() => setCricketFormat("ODI")}>ODI</button>
@@ -94,7 +89,8 @@ function App() {
       }
       {
         selectSport === "Football" && dropDownOptions && <div>
-          <select value={footballState.dropDown.selectedOption} onChange={(event) => handleDropDownChange(event.target.value)}>
+          <select  key={selectedDropdownOption} value={selectedDropdownOption} onChange={(event) => handleDropDownChange(event.target.value)}>
+            <option value="" disabled>Select {footballFilterType === 'Club' ? 'a Club' : 'a Country'}</option>
             {
               dropDownOptions.map(option => (
                 <option key={option} value={option}>{option}</option>
