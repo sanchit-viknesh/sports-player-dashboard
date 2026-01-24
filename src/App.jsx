@@ -3,53 +3,23 @@ import { CardList } from './Practice/CardList';
 import footballPlayerDetails from './jsons/FootballPlayers.json'
 import cricketPlayerDetails from './jsons/CricletPlayers.json'
 import { useMemo, useState } from 'react';
+import { useFilteredPlayers } from './Practice/Hooks/useFilteredPlayers';
 
 function App() {
   const [selectSport, setSport] = useState("Football");
   const [selectCricketFormat, setCricketFormat] = useState(null); // T20,ODI,Test
   const [footballFilterType, setFootballFilterType] = useState("Country"); // Club, Country
-  const [selectedDropdownOption, setSelectedDropdownOption] = useState(null); // Any one of the options in dropdown of Club, Country
-  
-  const filterFootballPlayers = (clubOrCountry, optionSelected) => {
-    if (!optionSelected) return footballPlayerDetails;
-    let playersIntheClub = footballState.playerDetails;
-    if (clubOrCountry === "Club") {
-      playersIntheClub = footballPlayerDetails.filter(filteredVal => (
-        filteredVal.clubs.includes(optionSelected)
-      ));
-      return playersIntheClub;
-    } else if (clubOrCountry === "Country") {
-      playersIntheClub = footballPlayerDetails.filter(filteredVal => (
-        filteredVal.country === optionSelected
-      ));
-      return playersIntheClub;
-    }
-  }
-  const filterCricketPlayersBasedOnFormat = (format) => {
-    if (!format) return cricketPlayerDetails;
-    return cricketPlayerDetails.filter(cricPlayer => cricPlayer.format === format);
-  }
+  const [selectedDropdownOption, setSelectedDropdownOption] = useState(''); // Any one of the options in dropdown of Club, Country
+
   const players = selectSport === "Football" ? footballPlayerDetails : cricketPlayerDetails;
 
-  const loadPlayerDetails = useMemo(() => {
-    if (selectSport === "Cricket") {
-      if (!selectCricketFormat) {
-        return cricketPlayerDetails;
-      }
-      return filterCricketPlayersBasedOnFormat(selectCricketFormat)
-    }
-    if (selectSport === "Football") {
-      if (!selectedDropdownOption) {
-        return footballPlayerDetails;
-      }
-      if (footballFilterType === "Club") {
-        return filterFootballPlayers(footballFilterType, selectedDropdownOption);
-      } else if (footballFilterType === "Country") {
-        return filterFootballPlayers(footballFilterType, selectedDropdownOption);
-      }
-    }
-    return players;
-  }, [selectSport, selectCricketFormat, footballFilterType, selectedDropdownOption]);
+  const loadPlayerDetails = useFilteredPlayers({
+    selectSport: selectSport,
+    players: players,
+    selectCricketFormat: selectCricketFormat,
+    footballFilterType: footballFilterType,
+    selectedDropdownOption: selectedDropdownOption
+  });
 
   const dropDownOptions = useMemo(() => {
     let dropDownValues = new Set();
@@ -69,8 +39,8 @@ function App() {
     setSelectedDropdownOption(optionSelected);
   }
   const handleFilterTypeChange = (clubOrCountry) => {
-    setFootballFilterType(clubOrCountry);
     setSelectedDropdownOption('');
+    setFootballFilterType(clubOrCountry);
   }
 
   return (
@@ -79,7 +49,7 @@ function App() {
       <button onClick={() => setSport("Football")}>Show Football Players</button>
       <button onClick={() => setSport("Cricket")}>Show Cricket Players</button>
       {
-        selectSport === "Football" ? <div className="game-speci fic-button-container">
+        selectSport === "Football" ? <div className="game-specific-button-container">
           <button onClick={() => handleFilterTypeChange('Country')}>Country Wise</button>
           <button onClick={() => handleFilterTypeChange('Club')}>Club Wise</button></div> :
           <div className="game-specific-button-container">
@@ -89,7 +59,7 @@ function App() {
       }
       {
         selectSport === "Football" && dropDownOptions && <div>
-          <select  key={selectedDropdownOption} value={selectedDropdownOption} onChange={(event) => handleDropDownChange(event.target.value)}>
+          <select key={selectedDropdownOption} value={selectedDropdownOption} onChange={(event) => handleDropDownChange(event.target.value)}>
             <option value="" disabled>Select {footballFilterType === 'Club' ? 'a Club' : 'a Country'}</option>
             {
               dropDownOptions.map(option => (
