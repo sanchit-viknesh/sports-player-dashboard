@@ -2,16 +2,32 @@ import './App.css'
 import { CardList } from './Practice/CardList';
 import footballPlayerDetails from './jsons/FootballPlayers.json'
 import cricketPlayerDetails from './jsons/CricletPlayers.json'
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useFilteredPlayers } from './Practice/Hooks/useFilteredPlayers';
 
 function App() {
+  
   const [selectSport, setSport] = useState("Football");
+  const [players, setPlayers] = useState([]);
   const [selectCricketFormat, setCricketFormat] = useState(null); // T20,ODI,Test
   const [footballFilterType, setFootballFilterType] = useState("Country"); // Club, Country
   const [selectedDropdownOption, setSelectedDropdownOption] = useState(''); // Any one of the options in dropdown of Club, Country
+  const [isAPILoading, setAPILoading] = useState(true);
 
-  const players = selectSport === "Football" ? footballPlayerDetails : cricketPlayerDetails;
+  useEffect(() => {
+    fetch();
+  }, [selectSport])
+
+  async function fetch() {
+    setAPILoading(true);
+    await new Promise(resolve => setTimeout(resolve,1000));
+    setPlayers(
+      selectSport === "Football"
+        ? footballPlayerDetails
+        : cricketPlayerDetails
+    );
+    setAPILoading(false);
+  }
 
   const loadPlayerDetails = useFilteredPlayers({
     selectSport: selectSport,
