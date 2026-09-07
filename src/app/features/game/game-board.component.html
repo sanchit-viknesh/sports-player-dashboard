@@ -1,0 +1,111 @@
+<header class="topbar">
+  <h1>StatDeck</h1>
+  <p class="tagline">Top Trumps with cricket and football stats.</p>
+</header>
+
+@if (store.phase() === 'idle') {
+  <section class="setup">
+    <h2>Choose a deck</h2>
+    <div class="setup__row">
+      <button type="button" (click)="start('cricket', 'bot')">Cricket · vs bot</button>
+      <button type="button" (click)="start('football', 'bot')">Football · vs bot</button>
+    </div>
+    <div class="setup__row">
+      <button type="button" class="ghost" (click)="start('cricket', 'human')">
+        Cricket · pass &amp; play
+      </button>
+      <button type="button" class="ghost" (click)="start('football', 'human')">
+        Football · pass &amp; play
+      </button>
+    </div>
+  </section>
+} @else {
+  <section class="scoreboard" aria-live="polite">
+    <span>You: {{ store.p1Count() }}</span>
+    <span>Round {{ store.round() }} / {{ store.maxRounds() }}</span>
+    <span>Opponent: {{ store.p2Count() }}</span>
+    @if (store.potCount() > 0) {
+      <span class="pot">Pot: {{ store.potCount() }}</span>
+    }
+  </section>
+
+  <p class="status" aria-live="polite">{{ statusText() }}</p>
+
+  <div class="table">
+    <article class="card">
+      @if (store.cards().p1; as card) {
+        <h3>{{ card.name }}</h3>
+        <p class="meta">{{ card.team }} · {{ card.role }}</p>
+        <ul class="stats">
+          @for (key of store.statKeys; track key) {
+            <li>
+              <button
+                type="button"
+                class="stat"
+                [ngClass]="rowState(key)"
+                [disabled]="!store.canPick()"
+                (click)="pick(key)"
+              >
+                <span class="stat__label">{{ labels()[key] }}</span>
+                <span class="stat__value">
+                  {{ card.stats[key].displayValue }}
+                  <small>{{ card.stats[key].unit }}</small>
+                </span>
+                @if (rowState(key); as result) {
+                  <span class="stat__result">{{ result }}</span>
+                }
+              </button>
+            </li>
+          }
+        </ul>
+      }
+    </article>
+
+    <article class="card card--opponent" [class.card--hidden]="!showOpponentCard()">
+      @if (store.cards().p2; as card) {
+        @if (showOpponentCard()) {
+          <h3>{{ card.name }}</h3>
+          <p class="meta">{{ card.team }} · {{ card.role }}</p>
+          <ul class="stats">
+            @for (key of store.statKeys; track key) {
+              <li>
+                <span class="stat stat--static" [ngClass]="rowState(key)">
+                  <span class="stat__label">{{ labels()[key] }}</span>
+                  <span class="stat__value">
+                    {{ card.stats[key].displayValue }}
+                    <small>{{ card.stats[key].unit }}</small>
+                  </span>
+                </span>
+              </li>
+            }
+          </ul>
+        } @else {
+          <div class="facedown" aria-label="Opponent card, face down">StatDeck</div>
+        }
+      }
+    </article>
+  </div>
+
+  @if (store.phase() === 'over') {
+    <button type="button" class="again" (click)="store.reset()">Play again</button>
+  }
+
+  @if (store.log().length) {
+    <section class="log">
+      <h2>Rounds</h2>
+      <ol>
+        @for (entry of store.log(); track entry.round) {
+          <li>
+            <strong>{{ labels()[entry.statKey] }}</strong>
+            — {{ entry.p1Card.name }} vs {{ entry.p2Card.name }}:
+            {{ entry.outcome === 'tie' ? 'tied' : entry.outcome === 'p1' ? 'you won' : 'opponent won' }}
+          </li>
+        }
+      </ol>
+    </section>
+  }
+
+  <footer class="freshness">
+    {{ sourceLabel() }} · as of {{ asOf() }}
+  </footer>
+}

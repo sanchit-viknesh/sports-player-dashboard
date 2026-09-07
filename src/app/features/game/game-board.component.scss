@@ -1,0 +1,136 @@
+:host {
+  display: block;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  font-family: system-ui, sans-serif;
+  color: #10221c;
+}
+
+.topbar {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+  .tagline { margin: 0.25rem 0 0; color: #4d6b60; }
+}
+
+.setup {
+  text-align: center;
+
+  &__row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+}
+
+button {
+  font: inherit;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #10221c;
+  background: #10221c;
+  color: #fff;
+  cursor: pointer;
+
+  &.ghost { background: transparent; color: #10221c; }
+  &:disabled { cursor: default; opacity: 0.75; }
+}
+
+.scoreboard {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.5rem;
+
+  .pot { color: #9a5b00; }
+}
+
+.status {
+  text-align: center;
+  min-height: 1.5rem;
+  margin: 0 0 1rem;
+  color: #4d6b60;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #cfded8;
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: #fff;
+
+  h3 { margin: 0; font-size: 1.15rem; }
+  .meta { margin: 0.15rem 0 0.9rem; color: #4d6b60; font-size: 0.9rem; }
+}
+
+.stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.stat {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dfeae6;
+  background: #f6faf8;
+  color: inherit;
+  text-align: left;
+
+  &--static { cursor: default; }
+  &__value { font-variant-numeric: tabular-nums; font-weight: 600; }
+  &__value small { font-weight: 400; color: #4d6b60; margin-left: 0.2rem; }
+  &__result { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  // Outcome is carried by the text label as well as the colour, so the result
+  // does not depend on colour perception alone.
+  &.won { border-color: #1c7a4f; background: #e6f5ed; }
+  &.lost { border-color: #a33; background: #fbeaea; }
+  &.tied { border-color: #9a5b00; background: #fdf3e2; }
+}
+
+.facedown {
+  display: grid;
+  place-items: center;
+  min-height: 14rem;
+  border-radius: 0.7rem;
+  background: repeating-linear-gradient(45deg, #10221c, #10221c 8px, #17342a 8px, #17342a 16px);
+  color: #7fe0b6;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.again { display: block; margin: 1.25rem auto 0; }
+
+.log {
+  margin-top: 2rem;
+
+  h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: #4d6b60; }
+  ol { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.3rem; font-size: 0.9rem; }
+}
+
+.freshness {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4d6b60;
+}

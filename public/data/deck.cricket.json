@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "sport": "cricket",
+  "generatedAt": "2026-09-07T00:00:00.000Z",
+  "source": "fixture",
+  "cards": [
+    {
+      "id": "ck-01", "name": "Rohit Sharma", "sport": "cricket", "team": "India", "role": "Opening batter",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 43.2, "displayValue": "43.2", "unit": "runs/inn", "direction": "higher", "percentile": 88 },
+        "creation": { "key": "creation", "rawValue": 92.4, "displayValue": "92.4", "unit": "SR", "direction": "higher", "percentile": 74 },
+        "denial": { "key": "denial", "rawValue": 5.9, "displayValue": "5.90", "unit": "econ", "direction": "lower", "percentile": 22 },
+        "consistency": { "key": "consistency", "rawValue": 48.6, "displayValue": "48.6", "unit": "avg", "direction": "higher", "percentile": 85 },
+        "experience": { "key": "experience", "rawValue": 262, "displayValue": "262", "unit": "matches", "direction": "higher", "percentile": 96 },
+        "form": { "key": "form", "rawValue": 51.0, "displayValue": "51.0", "unit": "last 5 avg", "direction": "higher", "percentile": 71 }
+      }
+    },
+    {
+      "id": "ck-02", "name": "Jasprit Bumrah", "sport": "cricket", "team": "India", "role": "Fast bowler",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 6.4, "displayValue": "6.4", "unit": "runs/inn", "direction": "higher", "percentile": 11 },
+        "creation": { "key": "creation", "rawValue": 61.2, "displayValue": "61.2", "unit": "SR", "direction": "higher", "percentile": 18 },
+        "denial": { "key": "denial", "rawValue": 4.51, "displayValue": "4.51", "unit": "econ", "direction": "lower", "percentile": 97 },
+        "consistency": { "key": "consistency", "rawValue": 23.4, "displayValue": "23.4", "unit": "avg", "direction": "higher", "percentile": 34 },
+        "experience": { "key": "experience", "rawValue": 148, "displayValue": "148", "unit": "matches", "direction": "higher", "percentile": 68 },
+        "form": { "key": "form", "rawValue": 9.0, "displayValue": "9.0", "unit": "last 5 wkts", "direction": "higher", "percentile": 82 }
+      }
+    },
+    {
+      "id": "ck-03", "name": "Ben Stokes", "sport": "cricket", "team": "England", "role": "All-rounder",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 35.1, "displayValue": "35.1", "unit": "runs/inn", "direction": "higher", "percentile": 72 },
+        "creation": { "key": "creation", "rawValue": 88.1, "displayValue": "88.1", "unit": "SR", "direction": "higher", "percentile": 66 },
+        "denial": { "key": "denial", "rawValue": 5.12, "displayValue": "5.12", "unit": "econ", "direction": "lower", "percentile": 61 },
+        "consistency": { "key": "consistency", "rawValue": 36.4, "displayValue": "36.4", "unit": "avg", "direction": "higher", "percentile": 62 },
+        "experience": { "key": "experience", "rawValue": 209, "displayValue": "209", "unit": "matches", "direction": "higher", "percentile": 84 },
+        "form": { "key": "form", "rawValue": 44.0, "displayValue": "44.0", "unit": "last 5 avg", "direction": "higher", "percentile": 58 }
+      }
+    },
+    {
+      "id": "ck-04", "name": "Rashid Khan", "sport": "cricket", "team": "Afghanistan", "role": "Spin bowler",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 11.8, "displayValue": "11.8", "unit": "runs/inn", "direction": "higher", "percentile": 24 },
+        "creation": { "key": "creation", "rawValue": 128.6, "displayValue": "128.6", "unit": "SR", "direction": "higher", "percentile": 91 },
+        "denial": { "key": "denial", "rawValue": 4.18, "displayValue": "4.18", "unit": "econ", "direction": "lower", "percentile": 99 },
+        "consistency": { "key": "consistency", "rawValue": 19.2, "displayValue": "19.2", "unit": "avg", "direction": "higher", "percentile": 28 },
+        "experience": { "key": "experience", "rawValue": 176, "displayValue": "176", "unit": "matches", "direction": "higher", "percentile": 76 },
+        "form": { "key": "form", "rawValue": 7.0, "displayValue": "7.0", "unit": "last 5 wkts", "direction": "higher", "percentile": 64 }
+      }
+    },
+    {
+      "id": "ck-05", "name": "Kane Williamson", "sport": "cricket", "team": "New Zealand", "role": "Top-order batter",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 45.9, "displayValue": "45.9", "unit": "runs/inn", "direction": "higher", "percentile": 92 },
+        "creation": { "key": "creation", "rawValue": 79.3, "displayValue": "79.3", "unit": "SR", "direction": "higher", "percentile": 44 },
+        "denial": { "key": "denial", "rawValue": 6.4, "displayValue": "6.40", "unit": "econ", "direction": "lower", "percentile": 14 },
+        "consistency": { "key": "consistency", "rawValue": 52.1, "displayValue": "52.1", "unit": "avg", "direction": "higher", "percentile": 94 },
+        "experience": { "key": "experience", "rawValue": 198, "displayValue": "198", "unit": "matches", "direction": "higher", "percentile": 81 },
+        "form": { "key": "form", "rawValue": 38.0, "displayValue": "38.0", "unit": "last 5 avg", "direction": "higher", "percentile": 49 }
+      }
+    },
+    {
+      "id": "ck-06", "name": "Mitchell Starc", "sport": "cricket", "team": "Australia", "role": "Fast bowler",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 9.2, "displayValue": "9.2", "unit": "runs/inn", "direction": "higher", "percentile": 17 },
+        "creation": { "key": "creation", "rawValue": 74.8, "displayValue": "74.8", "unit": "SR", "direction": "higher", "percentile": 38 },
+        "denial": { "key": "denial", "rawValue": 5.04, "displayValue": "5.04", "unit": "econ", "direction": "lower", "percentile": 69 },
+        "consistency": { "key": "consistency", "rawValue": 26.8, "displayValue": "26.8", "unit": "avg", "direction": "higher", "percentile": 41 },
+        "experience": { "key": "experience", "rawValue": 187, "displayValue": "187", "unit": "matches", "direction": "higher", "percentile": 79 },
+        "form": { "key": "form", "rawValue": 8.0, "displayValue": "8.0", "unit": "last 5 wkts", "direction": "higher", "percentile": 73 }
+      }
+    },
+    {
+      "id": "ck-07", "name": "Babar Azam", "sport": "cricket", "team": "Pakistan", "role": "Top-order batter",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 41.7, "displayValue": "41.7", "unit": "runs/inn", "direction": "higher", "percentile": 83 },
+        "creation": { "key": "creation", "rawValue": 88.9, "displayValue": "88.9", "unit": "SR", "direction": "higher", "percentile": 68 },
+        "denial": { "key": "denial", "rawValue": 7.1, "displayValue": "7.10", "unit": "econ", "direction": "lower", "percentile": 8 },
+        "consistency": { "key": "consistency", "rawValue": 46.3, "displayValue": "46.3", "unit": "avg", "direction": "higher", "percentile": 89 },
+        "experience": { "key": "experience", "rawValue": 154, "displayValue": "154", "unit": "matches", "direction": "higher", "percentile": 70 },
+        "form": { "key": "form", "rawValue": 41.0, "displayValue": "41.0", "unit": "last 5 avg", "direction": "higher", "percentile": 54 }
+      }
+    },
+    {
+      "id": "ck-08", "name": "Ravindra Jadeja", "sport": "cricket", "team": "India", "role": "All-rounder",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": { "key": "impact", "rawValue": 28.4, "displayValue": "28.4", "unit": "runs/inn", "direction": "higher", "percentile": 57 },
+        "creation": { "key": "creation", "rawValue": 96.2, "displayValue": "96.2", "unit": "SR", "direction": "higher", "percentile": 78 },
+        "denial": { "key": "denial", "rawValue": 4.42, "displayValue": "4.42", "unit": "econ", "direction": "lower", "percentile": 93 },
+        "consistency": { "key": "consistency", "rawValue": 33.9, "displayValue": "33.9", "unit": "avg", "direction": "higher", "percentile": 55 },
+        "experience": { "key": "experience", "rawValue": 231, "displayValue": "231", "unit": "matches", "direction": "higher", "percentile": 90 },
+        "form": { "key": "form", "rawValue": 6.0, "displayValue": "6.0", "unit": "last 5 wkts", "direction": "higher", "percentile": 47 }
+      }
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "sport": "football",
+  "generatedAt": "2026-09-07T00:00:00.000Z",
+  "source": "fixture",
+  "cards": [
+    {
+      "id": "fb-01",
+      "name": "Erling Haaland",
+      "sport": "football",
+      "team": "Man City",
+      "role": "Striker",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.96,
+          "displayValue": "0.96",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 94
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.21,
+          "displayValue": "0.21",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 41
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 0.4,
+          "displayValue": "0.40",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 12
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 74.2,
+          "displayValue": "74.2",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 38
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 1.4,
+          "displayValue": "1.40",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 88
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 221,
+          "displayValue": "221",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 74
+        }
+      }
+    },
+    {
+      "id": "fb-02",
+      "name": "Kevin De Bruyne",
+      "sport": "football",
+      "team": "Man City",
+      "role": "Attacking mid",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.34,
+          "displayValue": "0.34",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 66
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.61,
+          "displayValue": "0.61",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 97
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 1.1,
+          "displayValue": "1.10",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 34
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 82.4,
+          "displayValue": "82.4",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 86
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.9,
+          "displayValue": "0.90",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 71
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 402,
+          "displayValue": "402",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 97
+        }
+      }
+    },
+    {
+      "id": "fb-03",
+      "name": "Rodri",
+      "sport": "football",
+      "team": "Man City",
+      "role": "Defensive mid",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.11,
+          "displayValue": "0.11",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 29
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.14,
+          "displayValue": "0.14",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 31
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 3.2,
+          "displayValue": "3.20",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 92
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 91.3,
+          "displayValue": "91.3",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 98
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.3,
+          "displayValue": "0.30",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 36
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 288,
+          "displayValue": "288",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 85
+        }
+      }
+    },
+    {
+      "id": "fb-04",
+      "name": "Kylian Mbappe",
+      "sport": "football",
+      "team": "Real Madrid",
+      "role": "Forward",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.89,
+          "displayValue": "0.89",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 91
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.28,
+          "displayValue": "0.28",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 58
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 0.6,
+          "displayValue": "0.60",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 18
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 79.1,
+          "displayValue": "79.1",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 62
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 1.2,
+          "displayValue": "1.20",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 84
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 364,
+          "displayValue": "364",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 92
+        }
+      }
+    },
+    {
+      "id": "fb-05",
+      "name": "Virgil van Dijk",
+      "sport": "football",
+      "team": "Liverpool",
+      "role": "Centre-back",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.09,
+          "displayValue": "0.09",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 24
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.05,
+          "displayValue": "0.05",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 12
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 2.4,
+          "displayValue": "2.40",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 84
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 89.7,
+          "displayValue": "89.7",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 95
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.2,
+          "displayValue": "0.20",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 28
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 331,
+          "displayValue": "331",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 88
+        }
+      }
+    },
+    {
+      "id": "fb-06",
+      "name": "Jude Bellingham",
+      "sport": "football",
+      "team": "Real Madrid",
+      "role": "Midfielder",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.42,
+          "displayValue": "0.42",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 74
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.31,
+          "displayValue": "0.31",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 63
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 2.1,
+          "displayValue": "2.10",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 78
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 85.6,
+          "displayValue": "85.6",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 90
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.8,
+          "displayValue": "0.80",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 68
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 248,
+          "displayValue": "248",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 78
+        }
+      }
+    },
+    {
+      "id": "fb-07",
+      "name": "Bukayo Saka",
+      "sport": "football",
+      "team": "Arsenal",
+      "role": "Winger",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.38,
+          "displayValue": "0.38",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 71
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.44,
+          "displayValue": "0.44",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 82
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 1.4,
+          "displayValue": "1.40",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 52
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 80.2,
+          "displayValue": "80.2",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 71
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.9,
+          "displayValue": "0.90",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 74
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 269,
+          "displayValue": "269",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 80
+        }
+      }
+    },
+    {
+      "id": "fb-08",
+      "name": "Alisson Becker",
+      "sport": "football",
+      "team": "Liverpool",
+      "role": "Goalkeeper",
+      "asOf": "2026-09-07T00:00:00.000Z",
+      "stats": {
+        "impact": {
+          "key": "impact",
+          "rawValue": 0.0,
+          "displayValue": "0.00",
+          "unit": "goals/90",
+          "direction": "higher",
+          "percentile": 4
+        },
+        "creation": {
+          "key": "creation",
+          "rawValue": 0.02,
+          "displayValue": "0.02",
+          "unit": "assists/90",
+          "direction": "higher",
+          "percentile": 6
+        },
+        "denial": {
+          "key": "denial",
+          "rawValue": 0.1,
+          "displayValue": "0.10",
+          "unit": "tackles/90",
+          "direction": "higher",
+          "percentile": 8
+        },
+        "consistency": {
+          "key": "consistency",
+          "rawValue": 78.4,
+          "displayValue": "78.4",
+          "unit": "pass %",
+          "direction": "higher",
+          "percentile": 58
+        },
+        "form": {
+          "key": "form",
+          "rawValue": 0.4,
+          "displayValue": "0.40",
+          "unit": "G+A last 5",
+          "direction": "higher",
+          "percentile": 44
+        },
+        "experience": {
+          "key": "experience",
+          "rawValue": 294,
+          "displayValue": "294",
+          "unit": "apps",
+          "direction": "higher",
+          "percentile": 83
+        }
+      }
+    }
+  ]
+}
