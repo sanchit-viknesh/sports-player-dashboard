@@ -1,19 +1,20 @@
 # StatDeck
 
-A two-player Top Trumps card game where each card is a real cricket or football
-player, and the stats on the card come from a scheduled refresh rather than a
-hardcoded list.
+A two-player Top Trumps card game where each card is a real cricket player,
+styled after the physical Top Trumps cricket cards, with stats that come from
+a scheduled refresh rather than a hardcoded list.
 
-**Status:** week 1 — the game is playable end to end against sample data. Live
-data is not wired up yet.
+**Status:** in progress. The `Card` type now matches the real cricket card
+layout (batting/bowling blocks); the game engine, deck loading, and UI are
+being reworked to match and are not yet wired to it.
 
-## What works today
+## Scope
 
-- Full Top Trumps rules: deal, category pick, pot on a tie, round cap, winner.
-- Two modes: versus a simple bot, or pass-and-play on one screen.
-- Cricket and football decks, each with eight cards.
-- Cards show the raw stat; comparison runs on a percentile, so lower-is-better
-  stats (bowling economy) rank correctly instead of backwards.
+- **Cricket only for v1.** The card type is a discriminated union on `sport`,
+  so a second sport (football) can be added later as a new branch without
+  changing any cricket code — but it is not built now.
+- Two-player Top Trumps: pick a stat, higher value wins the round, ties go to
+  a pot.
 
 ## Architecture
 
@@ -33,16 +34,25 @@ Keeping the deck as a static file means the demo has no server to keep alive, no
 rate limits at request time, and no secrets in the client. A real API is a
 possible v2, not a requirement.
 
-### Normalizing two sports
+### Card shape
 
-Cricket and football stats do not share a vocabulary, so every card maps its raw
-fields onto six abstract categories — `impact`, `creation`, `denial`,
-`consistency`, `experience`, `form`. Each cell keeps both the raw value (shown on
-the card) and a percentile within its cohort (used to decide the round), plus a
-`direction` flag for stats where lower is better.
+A card holds the real numbers printed on a physical Top Trumps cricket card,
+grouped the same way the card groups them:
 
-A match is single-sport in v1. Mixed cricket-versus-football decks would need the
-percentile comparison to carry weight it has not earned yet.
+```ts
+interface PlayerCard {
+  id: string;
+  name: string;
+  team: string;
+  photoUrl?: string;
+  sport: Sport;          // discriminant — 'cricket' only today
+  batting: BattingStats; // matches, innings, runs, average, strike rate, ...
+  bowling: BowlingStats; // overs, wickets, economy rate, ...
+}
+```
+
+No abstraction, no percentile — a round is decided by comparing the raw number
+on the chosen stat.
 
 ## Project layout
 
